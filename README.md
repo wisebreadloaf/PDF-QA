@@ -51,12 +51,6 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-> If you don’t have a `requirements.txt`, you can generate one with:
-
-```bash
-pip freeze > requirements.txt
-```
-
 ### 4. Set Environment Variables
 
 Create a `.env` file in the root directory or export variables in your terminal:
