@@ -40,7 +40,17 @@ if uploaded_file is not None:
         docs = retriever.get_relevant_documents(query)
         context = "\n\n".join([doc.page_content for doc in docs[:3]])
 
-        full_prompt = f"Answer the question based on the following context, answer the questions in a very detailed manner and use markdown for formatting:\n\n{context}\n\nQuestion: {query}"
+        full_prompt = f"""
+You are an expert assistant. Using the following context extracted from a PDF document, provide a comprehensive and detailed answer to the user's question. Structure your response clearly, use appropriate markdown formatting such as headings, bullet points, numbered lists, and code blocks if applicable. Be precise, informative, and avoid unnecessary repetition.
+
+Context:
+{context}
+
+Question:
+{query}
+
+Answer:
+"""
 
         chat_completion = client.chat.completions.create(
             model="llama-3-70b-8192",

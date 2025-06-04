@@ -1,7 +1,7 @@
 # PDF-QA
 ---
 
-# 🦜🔗 QA Chatbot Application
+# QA Chatbot Application
 
 This is a simple and interactive Streamlit web application that allows users to upload a PDF and ask detailed questions about its content. The app uses LangChain for document processing and retrieval, OpenAI for embeddings, and Groq's LLaMA 3 model for natural language understanding.
 
@@ -51,12 +51,6 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-> If you don’t have a `requirements.txt`, you can generate one with:
-
-```bash
-pip freeze > requirements.txt
-```
-
 ### 4. Set Environment Variables
 
 Create a `.env` file in the root directory or export variables in your terminal:
@@ -75,23 +69,10 @@ export GROQ_API_KEY=your_groq_api_key
 
 ---
 
-## ▶️ Run the App
+## 5. Run the App
 
 ```bash
 streamlit run app.py
-```
-
----
-
-## 📁 Folder Structure
-
-```
-.
-├── app.py               # Main application script
-├── data/                # Stores uploaded PDF files
-├── chroma_db/           # Persistent vector store
-├── requirements.txt     # Python dependencies
-└── README.md            # This readme file
 ```
 
 ---
